@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>art gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <section>
+        <div class="navbar">
+            <div class="logo">Sketchit</div>
+            <div class="links">
+                <a href="#home" class="link">home</a>
+                <a href="#home" class="link">work</a>
+                <a href="#home" class="link">reviews</a>
+                <a href="#home" class="link">contact us</a>
+            </div>
+        </div>
+        <div class="navbar-mobile">
+            <div class="logo">Sketchit</div>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars" onclick="toggleMobileMenu()" style="color: aqua;"></i>
+            </div>
+        </div>
+
+        <div class="links-mobile" id="mobileMenu" style="display: none;">
+            <a href="#home" class="link">home</a><br>
+            <a href="#work" class="link">work</a><br>
+            <a href="#reviews" class="link">reviews</a><br>
+            <a href="#contact" class="link">contact us</a><br>
+        </div>
+    </section>
+
+    <section>
+        <div class="slideshow">
+            <div class="image-container">
+                <img src="assets/images/img1.jpg">
+            </div>
+            <div class="second-part">
+            <div class="text-container">
+                The artist in me,
+                sees beauty in every place...  <br>
+                The artist in me,
+                sees poetry in every face, 
+                that can paint a picture with every
+                word I write
+                whether it is shimmering of stars
+                or sunrise
+            </div>
+
+            <div class="gallery-container">
+                <div class="images-collection">
+                    <img src="assets/images/img1.jpg" onclick="slideshow(0)">
+                    <img src="assets/images/img2.jpg" onclick="slideshow(1)">
+                    <img src="assets/images/img3.jpg" onclick="slideshow(2)">
+                    <img src="assets/images/img4.jpg" onclick="slideshow(3)">
+                    <img src="assets/images/img5.jpg" onclick="slideshow(4)">
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="foot">
+        <span>©-Sketchit 2025</span>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
