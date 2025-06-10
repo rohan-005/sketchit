@@ -276,11 +276,16 @@ body {
         align-items: center;
         padding: clamp(0.5rem, 2vw, 1rem);
         background-color: #011013e4;
-        font-size: clamp(20px, 5vw, 30px);
+        font-size: 80px;
         transition: all 0.3s ease;
         
     }
-    
+    .logo{
+        font-size: 40px;
+    }
+    .menu-bar{
+        font-size: 40px;
+    }
     .links-mobile {
         display: none;
         flex-direction: column;
@@ -302,7 +307,7 @@ body {
     }
     
     .menu-bar {
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: 40px;
         cursor: pointer;
         /* color: #FF6B6B; */
         transition: all 0.3s ease;
