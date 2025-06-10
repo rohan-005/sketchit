@@ -1,11 +1,26 @@
 function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-        mobileMenu.style.display = 'block';
-    } else {
-        mobileMenu.style.display = 'none';
-    }
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  // Toggle menu visibility
+  const isVisible = mobileMenu.style.display === 'block';
+  mobileMenu.style.display = isVisible ? 'none' : 'block';
+
+  // If we just opened it, set up a one-time outside click handler
+  if (!isVisible) {
+    // Timeout prevents immediate closing due to event bubbling from the toggle button itself
+    setTimeout(() => {
+      function handleClickOutside(event) {
+        if (!mobileMenu.contains(event.target)) {
+          mobileMenu.style.display = 'none';
+          document.removeEventListener('click', handleClickOutside);
+        }
+      }
+
+      document.addEventListener('click', handleClickOutside);
+    }, 0);
+  }
 }
+
 
 const images = [{
     image : "assets/images/img1.jpg",
