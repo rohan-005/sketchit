@@ -1,0 +1,22 @@
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 160px;
+    padding: 16px;
+    max-width: 1400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.images-grid img {
+    width: 150%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.images-grid img:hover {
+    transform: scale(1.3);
+}
